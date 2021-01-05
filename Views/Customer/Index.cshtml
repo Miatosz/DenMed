@@ -1,0 +1,39 @@
+@model IEnumerable<Customer>
+
+@{
+    ViewBag.Title = "Wszystkie produkty";
+}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Imie i nazwisko</th>
+      <th scope="col">Pesel</th>
+      <th scope="col">Adres</th>
+	  <th scope="col">Telefon</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var p in @Model)
+    {
+        <tr>
+            <th scope="row">@p.Id</th>
+            <td>@p.Name @p.Surname</td>
+            <td>@p.Pesel</td>
+            <td>@p.Adress.City @p.Adress.Street @p.Adress.HouseNumber @p.Adress.PostCode</td>
+            <td>@p.PhoneNumber</td>
+            <td class="text-center">
+              <form asp-action="DeleteCustomer" method="post">
+                  <input type="hidden" name="customerId" value="@p.Id" />
+                  <button type="submit" class="btn btn-danger btn-sm">
+                      Usuń
+                  </button>
+              </form>
+          </td>
+        </tr>
+    }
+    
+  </tbody>
+</table>

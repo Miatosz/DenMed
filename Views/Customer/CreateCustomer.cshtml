@@ -1,0 +1,45 @@
+@model Customer
+
+<form asp-action="CreateCustomer" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name">Imie</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname">Nazwisko</label>
+        <textarea asp-for="Surname" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Pesel">Pesel</label>
+        <input asp-for="Pesel" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber">telefon</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress.City">Miasto</label>
+        <input asp-for="Adress.City" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress.PostCode">Zip</label>
+        <input asp-for="Adress.PostCode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress.Street">ulica</label>
+        <input asp-for="Adress.Street" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress.HouseNumber">nr domu</label>
+        <input asp-for="Adress.HouseNumber" class="form-control" />
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Zapisz</button>
+        <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+
+    </div>
+</form>

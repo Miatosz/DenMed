@@ -1,0 +1,180 @@
+body
+{
+    background-color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+#container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+.rectangle
+{
+    width: 960px;
+    margin: 20px;
+}
+
+.square
+{
+    width: 45%;
+    float: left;
+}
+
+.square1
+{
+    width: 55%;
+    float: left;
+}
+
+#logo
+{
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size 70px;
+    width: 600px;
+    background-color:burlywood;
+}
+
+#zegar
+{
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70px;
+}
+
+.tile
+{
+    margin: 10px;
+    width: 200px;
+    height: 142px;
+    background-color: #F4A360;
+    float: left;
+}
+
+.tile:hover
+{
+    background-color: #F4A340;
+}
+
+.tile1
+{
+    margin: 10px;
+    width: 200px;
+    height: 142px;
+    background-color: sandybrown;
+    float: left;
+}
+
+.tile1:hover
+{
+    background-color: #F4A340;
+}
+
+.tile2
+{
+    margin: 10px;
+    width: 200px;
+    height: 142px;
+    background-color: sandybrown;
+    float: left;
+}
+
+.tile2:hover
+{
+    background-color: #F4A340;
+}
+
+.tile3
+{
+    margin: 10px;
+    width: 200px;
+    height: 142px;
+    background-color: sandybrown;
+    float: left;
+}
+
+.tile3:hover
+{
+    background-color: #F4A340;
+}
+
+.tile4
+{
+    margin: 10px;
+    width: 420px;
+    height: 142px;
+    background-color:antiquewhite;
+    text-align: center;
+    color:black;
+}
+
+
+.tile5
+{
+    margin: 10px;
+    width: 540px;
+    height: 326px;
+    background-color: grey;
+}
+
+.phone
+{
+    margin: 16px;
+    width: 105px;
+    height: 120px;
+    background-color: green;
+    float: left;
+}
+
+.phone:hover
+{
+    background-color: limegreen;
+}
+
+.fb
+{
+    margin: 16px;
+    width: 105px;
+    height: 120px;
+    background-color: 	#4267B2;
+    float: left;
+}
+
+.fb:hover
+{
+    background-color: blue;
+}
+
+.twitter
+{
+    margin: 16px;
+    width: 105px;
+    height: 120px;
+    background-color: #1DA1F2;
+    float: left;
+}
+
+.twitter:hover
+{
+    background-color: blue;
+}
+
+
+.img
+{
+    margin: 16px;
+    width: 105px;
+    height: 120px;
+    background-color: sandybrown;
+    float: left;
+}
+
+
+.img:hover
+{
+    background-color: #F4A340;
+}

@@ -1,0 +1,38 @@
+@model IEnumerable<Reservation>
+
+@{
+    ViewBag.Title = "Wszystkie produkty";
+}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Imie i nazwisko pacjenta</th>
+      <th scope="col">data</th>
+      <th scope="col">operacja</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var r in @Model)
+    {
+        <tr>
+            <th scope="row">@r.Id</th>
+            <td>@r.Customer.Name @r.Customer.Surname</td>
+            <td>@r.Data</td>
+            <td>@r.Surgery.Name</td>
+            <td class="text-center">
+              <form asp-action="DeleteReservation" method="post">
+                  <input type="hidden" name="reservationId" value="@r.Id" />
+                  <button type="submit" class="btn btn-danger btn-sm">
+                      Usuń
+                  </button>
+              </form>
+          </td>
+        </tr>
+    }
+    
+  </tbody>
+</table>

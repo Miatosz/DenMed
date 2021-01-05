@@ -1,0 +1,38 @@
+@model IEnumerable<Specialist>
+
+@{
+    ViewBag.Title = "Wszystkie produkty";
+}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Imie i nazwisko lekarza</th>
+      <th scope="col">telefon</th>
+      <th scope="col">wiek</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var s in @Model)
+    {
+        <tr>
+            <th scope="row">@s.Id</th>
+            <td>@s.Name @s.Surname</td>
+            <td>@s.PhoneNumber</td>
+            <td>@s.Age</td>
+            <td class="text-center">
+              <form asp-action="DeleteSpecialist" method="post">
+                  <input type="hidden" name="specialistId" value="@s.Id" />
+                  <button type="submit" class="btn btn-danger btn-sm">
+                      Usuń
+                  </button>
+              </form>
+          </td>
+        </tr>
+    }
+    
+  </tbody>
+</table>

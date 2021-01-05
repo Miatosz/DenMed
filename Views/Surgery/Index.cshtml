@@ -1,0 +1,30 @@
+@model IEnumerable<Surgery>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Cena</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var p in @Model)
+    {
+        <tr>
+            <th scope="row">@p.Id</th>
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+            <td class="text-center">
+              <form asp-action="DeleteSurgery" method="post">
+                  <input type="hidden" name="surgeryId" value="@p.Id" />
+                  <button type="submit" class="btn btn-danger btn-sm">
+                      Usuń
+                  </button>
+              </form>
+          </td>
+        </tr>
+    }
+    
+  </tbody>
+</table>

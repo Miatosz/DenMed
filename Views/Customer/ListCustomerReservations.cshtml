@@ -1,0 +1,45 @@
+@model Customer
+
+<style>
+    th, td {
+  text-align: center;
+  border: 1px solid black;
+}
+</style>
+
+@if (@Model.Reservations != null)
+{
+   <table class="table">
+  <thead>
+    <tr>
+        <th scope="col">Imie i nazwisko pacjenta</th>
+        <th scope="col">operacja</th>
+        <th scope="col">cena</th>
+        <th scope="col">data</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+        <tr>
+            <td ROWSPAN="4">@Model.Name @Model.Surname</td>
+            
+            @foreach (var r in @Model.Reservations)
+            {   
+                <tr>
+                <td>@r.Surgery.Name</td>
+                <td>@r.Surgery.Price</td>
+                <td>@r.Data</td>
+                </tr>             
+               
+            }
+        </tr>
+        
+  </tbody>
+</table> 
+} else
+{
+<h1>
+    Nie masz zadnych rezerwacji
+</h1>
+}
